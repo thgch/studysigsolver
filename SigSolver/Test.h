@@ -16,17 +16,21 @@ public:
 		int lenght = ARRAY_LENGTH(path);
 		int path_dim = 1;
 		int order = 3;
-		float* sig1 = new float[sigdim(path_dim, order)];
-		float* sig2 = new float[sigdim(path_dim, order)];
-		signature(path, lenght, path_dim, order, sig1);
-		logSignature(path, lenght, path_dim, order, sig2);
 
-		vector<float> res(sigdim(path_dim, order));
-		for (vector<float>::size_type i = 0; i < res.size(); ++i)
-			res[i] = sig1[i];
-		delete[] sig1;
-		delete[] sig2;
-
+		float* sig = new float[sigdim(path_dim, order)];
+		signature(path, lenght, path_dim, order, sig);
+		vector<float> res_sig(sigdim(path_dim, order));
+		for (vector<float>::size_type i = 0; i < res_sig.size(); ++i)
+			res_sig[i] = sig[i];
+		
+		float* logsig = new float[logsigdim(path_dim, order)];
+		logSignature(path, lenght, path_dim, order, logsig);
+		vector<float> res_logsig(logsigdim(path_dim, order));
+		for (vector<float>::size_type i = 0; i < res_logsig.size(); ++i)
+			res_logsig[i] = logsig[i];
+		
+		delete[] sig;
+		delete[] logsig;
 		return 1;
 	}
 };

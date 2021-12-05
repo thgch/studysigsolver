@@ -1,6 +1,0 @@
-﻿  Organism.cpp
-D:\playground\cpp\SigSolver\SigSolver\iisignature\logsig.hpp(81,34): warning C4267: 'return': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
-  Population.cpp
-  SigSolver.cpp
-  コードを生成中...
-  SigSolver.vcxproj -> D:\playground\cpp\SigSolver\x64\Debug\SigSolver.exe
