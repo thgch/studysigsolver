@@ -1,0 +1,9 @@
+﻿  Organism.cpp
+D:\playground\cpp\SigSolver\SigSolver\iisignature\logsig.hpp(81,34): warning C4267: 'return': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+  Population.cpp
+  SigSolver.cpp
+  コード生成しています。
+  Previous IPDB not found, fall back to full compilation.
+  All 59 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  SigSolver.vcxproj -> D:\playground\cpp\SigSolver\x64\Release\SigSolver.exe
