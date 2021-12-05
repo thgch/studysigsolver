@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef _ORGANISM_H
 #define _ORGANISM_H
 
@@ -31,4 +33,4 @@ private:
 	void randomise();
 };
 
-#endif _ORGANISM_H
+#endif

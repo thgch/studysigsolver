@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include "Test.h"
 #include "Population.h"
 
 using namespace std;
@@ -12,6 +13,7 @@ void solve(vector<double>& sig, int order, int n_iter, int n_organism, int n_poi
 int main()
 {
     std::cout << "Hello World!\n";
+    Test::calc_signature();
 }
 
 void solve(vector<double>& sig, int order, int n_iter, int n_organism, int n_points, double pip_size, int max_n_pip, int top_p, double mutation_prob)

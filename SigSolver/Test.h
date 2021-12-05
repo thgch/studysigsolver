@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef _TEST_H
 #define _TEST_H
 
@@ -12,7 +14,7 @@ class Test
 public:
 	static int calc_signature()
 	{
-		float path[] = { 0.0, 1.0 };
+		float path[] = { 0.0, 2.0, 1.0, 4.0 };
 		int lenght = ARRAY_LENGTH(path);
 		int path_dim = 1;
 		int order = 3;
@@ -35,4 +37,4 @@ public:
 	}
 };
 
-#endif _TEST_H
+#endif

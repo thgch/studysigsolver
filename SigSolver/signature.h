@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef _SIGNATURE_H
 #define _SIGNATURE_H
 
@@ -24,10 +26,10 @@ int sigdim(int d, int depth) {
     if (d == 1 || d == 0)
         return depth + 1;
     else if (d <= 5) {
-        return (powi[d][depth + 1] - d) / (d - 1);
+        return (powi[d][depth + 1] - 1) / (d - 1);
     }
     else {
-        return ((int)pow(d, depth + 1) - d) / (d - 1);
+        return ((int)pow(d, depth + 1) - 1) / (d - 1);
     }
 }
 
@@ -584,12 +586,12 @@ void logSignature(float* path, int length, int d, int depth, float* sig) {
     std::vector<float> fullSig(sigdim(d, depth));
     std::vector<float> fullLogSig(sigdim(d, depth));
     signature(path, length, d, depth, &fullSig[0]);
-    tensorLog(&fullSig[0], &fullLogSig[0], d, depth);
+	tensorLog(&fullSig[0], &fullLogSig[0], d, depth);
 
     for (int i = 0; i < logsigdim(d, depth); ++i)
         sig[i] = 0;
     if (d == 1) {
-        for (int i = 0; sparseBasisD2[i + 1] < sigdim(d, depth); i += 3)
+        for (int i = 0; i < logsigdim(d, depth); i += 3)
             sig[sparseBasisD2[i]] +=
             fullLogSig[sparseBasisD2[i + 1]] * sparseBasisD2[i + 2] / 720720.0f;
     }
@@ -620,4 +622,4 @@ void logSignature(float* path, int length, int d, int depth, float* sig) {
     }
 }
 
-#endif _SIGNATURE_H
+#endif

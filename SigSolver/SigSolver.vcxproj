@@ -150,7 +150,6 @@
     <ClCompile Include="Organism.cpp" />
     <ClCompile Include="Population.cpp" />
     <ClCompile Include="SigSolver.cpp" />
-    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Organism.h" />

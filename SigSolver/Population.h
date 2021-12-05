@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef _POPULATION_H
 #define _POPULATION_H
 
@@ -21,4 +23,4 @@ public:
 	double evolve(vector<double>& sig, int top_p, int order, double mutation_prob = 0.1);
 };
 
-#endif _POPULATION_H
+#endif
