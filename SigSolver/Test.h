@@ -2,10 +2,10 @@
 
 #ifndef _TEST_H
 #define _TEST_H
+#define ARRAY_LENGTH(a) (sizeof(a)/sizeof(a[0]))
 
 #include <vector>
-#include "signature.h"
-#define ARRAY_LENGTH(a) (sizeof(a)/sizeof(a[0]))
+#include "libsig.h"
 
 using namespace std;
 

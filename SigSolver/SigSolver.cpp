@@ -18,7 +18,7 @@ int main()
 
 void solve(vector<double>& sig, int order, int n_iter, int n_organism, int n_points, double pip_size, int max_n_pip, int top_p, double mutation_prob)
 {
-    auto population = Population(n_organism, n_points, pip_size, max_n_pip);
+    auto population = Population(n_organism, n_points, pip_size, max_n_pip, order);
     for (int i = 0; i < n_iter; ++i) {
         double loss = population.evolve(sig, top_p, order);
     }

@@ -8,7 +8,6 @@ namespace TestSigSolver
 	TEST_CLASS(TestSigSolver)
 	{
 	public:
-		
 		TEST_METHOD(TestMethod1)
 		{
 		}
